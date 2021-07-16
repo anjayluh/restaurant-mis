@@ -10,12 +10,10 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     permission_classes = (IsAuthenticated,)
     filter_backends = [OrderingFilter]
-    ordering_fields = ["updated"]
-    ordering = ["-updated"]
 
     def get_queryset(self):
-        if self.request.user.is_superuser:
-            return User.objects.all()
+        # if self.request.user.is_superuser:
+        return User.objects.all()
 
     def get_object(self):
         lookup_field_value = self.kwargs[self.lookup_field]

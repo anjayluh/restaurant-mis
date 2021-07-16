@@ -16,10 +16,8 @@ from django.contrib import admin
 from django.urls import path, include
 from core.routers import router
 from rest_framework import routers
-from core.menu.views import MenuView
 
 router = routers.DefaultRouter()
-router.register(r"menu", MenuView, "menu")
 
 
 urlpatterns = [
