@@ -54,6 +54,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
+    'request_logging.middleware.LoggingMiddleware',
 ]
 
 ROOT_URLCONF = "restaurant.urls"
